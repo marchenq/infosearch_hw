@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block content %}
+    {% for result in results %}
+        <div class="list {% if not loop.last %} border-bottom {% endif %}">
+            <i class="fa-solid fa-{{loop.index}}"></i>
+            <div class="d-flex flex-column ml-3">
+                <span>{{ result[0] }}</span>
+                <small>{{ result[1] }}</small>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
